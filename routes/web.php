@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\OnboardController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/landing', function () {
+  return view('landingPage'); // Remplacez 'app' par le nom de votre vue principale.
+});
+Auth::routes();
+
+
+Route::resource('onboards', OnboardController::class);
