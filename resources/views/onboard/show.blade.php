@@ -20,18 +20,18 @@
 
                     <div class="card-body bg-white">
                         
-                                <div class="form-group mb-2 mb20">
-                                    <strong>Title:</strong>
-                                    {{ $onboard->title }}
-                                </div>
-                                <div class="form-group mb-2 mb20">
-                                    <strong>Image:</strong>
-                                    {{ $onboard->image }}
-                                </div>
-                                <div class="form-group mb-2 mb20">
-                                    <strong>Description:</strong>
-                                    {{ $onboard->description }}
-                                </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Title:</strong>
+                            {{ $onboard->title }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Image:</strong>
+                            {{ $onboard->image }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Description:</strong>
+                            {{ $onboard->description }}
+                        </div>
 
                     </div>
                 </div>

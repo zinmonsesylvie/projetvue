@@ -20,14 +20,16 @@ use Illuminate\Database\Eloquent\Model;
 class Onboard extends Model
 {
     
+
     protected $perPage = 20;
 
     /**
-     * The attributes that are mass assignable.
+     * Attributes that should be mass-assignable.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $fillable = ['title', 'image', 'description'];
+
 
 
 }
