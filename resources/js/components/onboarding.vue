@@ -7,7 +7,7 @@
       v-show="currentStep === step.id"
     >
       <h2>{{ step.title }}</h2>
-      <img :src="step.image" alt="Onboarding Image" class="onboarding-image" />
+      <img :src="`/storage/${step.image}`"alt="Onboarding Image" class="onboarding-image" />
       <p>{{ step.description }}</p>
       <button @click="nextStep" v-if="currentStep < steps.length">Suivant</button>
       <button @click="endOnboarding" v-else>Démarrer</button>
@@ -50,7 +50,7 @@ export default {
   },
   mounted() {
     if (localStorage.getItem("onboardingComplete") === "true") {
-      this.showOnboarding = true;
+      this.showOnboarding = false;
       this.fetchOnboardingSteps();
     }
   },
@@ -77,9 +77,6 @@ export default {
   width: 400px;
   text-align: center;
 }
-
-
-
 button {
   margin-top: 20px;
   padding: 10px 20px;

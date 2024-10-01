@@ -35,7 +35,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 									<th >Title</th>
 									<th >Image</th>
 									<th >Description</th>
@@ -47,16 +47,15 @@
                                     @foreach ($onboards as $onboard)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 										<td >{{ $onboard->title }}</td>
 
                                         <td>
-                                            <!-- Affichage de l'image du logo depuis la base de données -->
-                                            
+
                                                 <img src="{{ asset('storage/' . $onboard->image) }}" alt="Image" style="width: 50px; height: 50px; object-fit: cover;">
                                         </td>
 
-										
+
 										<td >{{ $onboard->description }}</td>
 
                                             <td>
