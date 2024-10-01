@@ -50,7 +50,7 @@ export default {
   },
   mounted() {
     if (localStorage.getItem("onboardingComplete") === "true") {
-      this.showOnboarding = false;
+      this.showOnboarding = true;
       this.fetchOnboardingSteps();
     }
   },
@@ -114,8 +114,7 @@ button:hover {
 
 
 .onboarding-image {
-  width: 250px;
-  height: 250px;
-  margin: 20px 0;
+  width: 150px;
+  height: 150px;
 }
 </style>

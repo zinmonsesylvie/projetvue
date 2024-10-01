@@ -27,4 +27,4 @@ Route::get('/landing', function () {
 Auth::routes();
 
 
-// Route::resource('onboards', OnboardController::class);
+Route::resource('onboards', OnboardController::class);
