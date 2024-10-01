@@ -1,33 +1,38 @@
 <template>
     <div v-if="showOnboarding" class="onboarding-modal">
       <div class="onboarding-step" v-if="currentStep === 1">
-        <h2>Welcome to Sales Management!</h2>
-        <p>This application helps you manage your sales efficiently.</p>
-        <button @click="nextStep">Next</button>
+        <h2>Bienvenue sur notre application de gestion de ventes!</h2>
+        <img :src="'/images/logo.jpg'" alt="Laravel Logo" class="onboarding-logo">
+        <p>Cette application vous permet de gérer vos ventes.</p>
+        <button @click="nextStep">Suivant</button>
       </div>
 
       <div class="onboarding-step" v-if="currentStep === 2">
-        <h2>Manage Your Products</h2>
-        <p>You can add, edit, and remove products from your inventory.</p>
-        <button @click="nextStep">Next</button>
+        <h2>Gérer vos produits</h2>
+        <img :src="'/images/logo.jpg'" alt="Laravel Logo" class="onboarding-logo">
+        <p>Vous pouvez ajouter, modifier et supprimer des produits de votre inventaire.</p>
+        <button @click="nextStep">Suivant</button>
       </div>
 
       <div class="onboarding-step" v-if="currentStep === 3">
-        <h2>Track Sales and Orders</h2>
-        <p>Monitor sales transactions and keep track of customer orders in real-time.</p>
-        <button @click="nextStep">Next</button>
+        <h2>Suivre les ventes et les commandes.</h2>
+        <img :src="'/images/logo.jpg'" alt="Laravel Logo" class="onboarding-logo">
+        <p>Surveillez les transactions de vente et suivez les commandes des clients en temps réel.</p>
+        <button @click="nextStep">Suivant</button>
       </div>
 
       <div class="onboarding-step" v-if="currentStep === 4">
-        <h2>Generate Reports</h2>
-        <p>Get detailed sales reports to analyze your performance and make better decisions.</p>
-        <button @click="nextStep">Next</button>
+        <h2>Générer des rapports.</h2>
+        <img :src="'/images/logo.jpg'" alt="Laravel Logo" class="onboarding-logo">
+        <p>Obtenez des rapports de vente détaillés pour analyser vos performances et prendre de meilleures décisions.</p>
+        <button @click="nextStep">Suivant</button>
       </div>
 
       <div class="onboarding-step" v-if="currentStep === 5">
-        <h2>You're all set!</h2>
-        <p>Now you are ready to explore the application. Have a great journey managing your sales!</p>
-        <button @click="endOnboarding">Get Started</button>
+        <h2>Vous êtes prêt !</h2>
+        <img :src="'/images/logo.jpg'" alt="Laravel Logo" class="onboarding-logo">
+        <p>Vous êtes maintenant prêt à explorer l'application. Bonne gestion de vos ventes !</p>
+        <button @click="endOnboarding">Démarrer</button>
       </div>
     </div>
   </template>
@@ -48,14 +53,13 @@
       },
       endOnboarding() {
         this.showOnboarding = false;
-        // Optionally store the onboarding completion in localStorage or backend
         localStorage.setItem('onboardingComplete', 'true');
+        window.location.href = '/landing';
       },
     },
     mounted() {
-      // Check if the user has already completed the onboarding
       if (localStorage.getItem('onboardingComplete') === 'true') {
-        this.showOnboarding = false;
+        this.showOnboarding = true;
       }
     },
   };
@@ -95,4 +99,9 @@
   button:hover {
     background-color: #2779bd;
   }
+
+  .onboarding-logo {
+  width: 150px;
+  height: 100px;
+}
   </style>
