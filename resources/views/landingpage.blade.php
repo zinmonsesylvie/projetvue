@@ -213,7 +213,7 @@
                     </li>
                   </ul>
                   <p class="mb-0 fw-semibold fs-5">
-                    <span>52,589+</span> de vendeurs utilisent cette plateforme                  </p>
+                    <span>52,589+</span> de vendeurs utilisent cette plateforme</p>
                 </div>
                 <h2
                   class="text-center mb-0 fs-9 fw-bolder"
@@ -221,8 +221,7 @@
                   data-aos-delay="200"
                   data-aos-duration="1000"
                 >
-                  Production ready & developer friendly bootstrap based admin
-                  dashboard template
+                L'application de gestion de vente qui vous permet de suivre les ventes et de gérer les stocks facilement.
                 </h2>
               </div>
             </div>
