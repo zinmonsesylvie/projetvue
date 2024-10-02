@@ -13,5 +13,46 @@ export default defineConfig({
         }),
         vue()
     ],
+    build: {
+        sourcemap: 'inline',
+    },
+    server: {
+        
+        hmr: {
+            overlay: true,
+        },
+    },
    
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

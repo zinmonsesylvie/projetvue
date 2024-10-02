@@ -16558,7 +16558,7 @@ html[data-boxed-layout=boxed] .container-fluid, html[data-boxed-layout=boxed] .c
   padding: 5px 20px;
   border-radius: 7px;
   font-size: 16px;
-  color: var(--bs-dark);
+  color: white;
   display: flex;
   align-items: center;
   position: relative;
